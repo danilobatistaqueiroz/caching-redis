@@ -1,0 +1,14 @@
+docker run -it --name redis -p 6379:6379 redis:5.0.3
+
+
+docker exec -it redis /bin/bash
+
+# redis-cli
+
+127.0.0.1:6379> KEYS *
+
+127.0.0.1:6379> get "hello::SimpleKey []"
+
+127.0.0.1:6379> del "hello::SimpleKey []"
+
+127.0.0.1:6379> set "hello::SimpleKey []" "  "
